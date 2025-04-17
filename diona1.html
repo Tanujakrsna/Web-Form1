@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical & Travel Expense Request</title>
+  <style>
+    @media print {
+      .no-print { display: none; }
+      body { margin: 0; }
+      .page-break { page-break-before: always; }
+      footer { position: fixed; bottom: 0; width: 100%; }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 120px;
+    }
+
+    .header-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.4em;
+    }
+
+    .claim-box {
+      border: 1px solid #000;
+      padding: 5px 10px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    .footer-address {
+      text-align: center;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+    }
+
+    .intro-text {
+      margin: 20px 0;
+    }
+
+    .intro-text span {
+      color: #0066cc;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 0.9em;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eee;
+      color: black;
+    }
+
+    td {
+      color: #0066cc;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin: 20px 0 10px;
+      font-size: 1.1em;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #aaa;
+      margin: 40px 0;
+    }
+
+    footer {
+      font-size: 0.8em;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    .dynamic-section {
+      margin-bottom: 30px;
+    }
+  </style>
+  <script>
+    function addSection() {
+      const container = document.getElementById("dynamicContainer");
+      const newSection = document.createElement("div");
+      newSection.classList.add("dynamic-section");
+      newSection.innerHTML = `
+        <div class="section-title">
+          <label>Expense Name: <input type="text" placeholder="Enter expense category"></label>
+        </div>
+        <div>
+          <label>Number of Columns: <input type="number" id="colCount" min="1" max="10" value="2" onchange="generateTable(this)"></label>
+        </div>
+        <div class="dynamic-table"></div>
+      `;
+      container.appendChild(newSection);
+      generateTable(newSection.querySelector('#colCount'));
+    }
+
+    function generateTable(input) {
+      const count = parseInt(input.value);
+      const tableContainer = input.closest('.dynamic-section').querySelector('.dynamic-table');
+      let headerRow = '<tr>';
+      let valueRow = '<tr>';
+      for (let i = 0; i < count; i++) {
+        headerRow += `<th contenteditable='true'>Column ${i + 1}</th>`;
+        valueRow += `<td contenteditable='true'>Value ${i + 1}</td>`;
+      }
+      headerRow += '</tr>';
+      valueRow += '</tr>';
+      tableContainer.innerHTML = `<table>${headerRow}${valueRow}</table>`;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medical & Travel Expense Request</title>
+  <style>
+    @media print {
+      .no-print { display: none; }
+      body { margin: 0; }
+      .page-break { page-break-before: always; }
+      footer { position: fixed; bottom: 0; width: 100%; }
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      margin: 40px;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 10px;
+    }
+
+    .logo {
+      width: 120px;
+    }
+
+    .header-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 1.4em;
+    }
+
+    .claim-box {
+      border: 1px solid #000;
+      padding: 5px 10px;
+      display: inline-block;
+      margin-top: 5px;
+    }
+
+    .footer-address {
+      text-align: center;
+      font-size: 0.9em;
+      margin-bottom: 20px;
+    }
+
+    .intro-text {
+      margin: 20px 0;
+    }
+
+    .intro-text span {
+      color: #0066cc;
+      font-weight: bold;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+      font-size: 0.9em;
+    }
+
+    th, td {
+      border: 1px solid #333;
+      padding: 8px;
+      text-align: left;
+    }
+
+    th {
+      background-color: #eee;
+      color: black;
+    }
+
+    td {
+      color: #0066cc;
+    }
+
+    .section-title {
+      font-weight: bold;
+      margin: 20px 0 10px;
+      font-size: 1.1em;
+    }
+
+    hr {
+      border: none;
+      border-top: 1px solid #aaa;
+      margin: 40px 0;
+    }
+
+    footer {
+      font-size: 0.8em;
+      display: flex;
+      justify-content: space-between;
+      padding: 0 40px;
+    }
+
+    .dynamic-section {
+      margin-bottom: 30px;
+    }
+  </style>
+  <script>
+    function addSection() {
+      const container = document.getElementById("dynamicContainer");
+      const newSection = document.createElement("div");
+      newSection.classList.add("dynamic-section");
+      newSection.innerHTML = `
+        <div class="section-title">
+          <label>Expense Name: <input type="text" placeholder="Enter expense category"></label>
+        </div>
+        <div>
+          <label>Number of Columns: <input type="number" id="colCount" min="1" max="10" value="2" onchange="generateTable(this)"></label>
+        </div>
+        <div class="dynamic-table"></div>
+      `;
+      container.appendChild(newSection);
+      generateTable(newSection.querySelector('#colCount'));
+    }
+
+    function generateTable(input) {
+      const count = parseInt(input.value);
+      const tableContainer = input.closest('.dynamic-section').querySelector('.dynamic-table');
+      let headerRow = '<tr>';
+      let valueRow = '<tr>';
+      for (let i = 0; i < count; i++) {
+        headerRow += `<th contenteditable='true'>Column ${i + 1}</th>`;
+        valueRow += `<td contenteditable='true'>Value ${i + 1}</td>`;
+      }
+      headerRow += '</tr>';
+      valueRow += '</tr>';
+      tableContainer.innerHTML = `<table>${headerRow}${valueRow}</table>`;
+    }
+  </script>
+</head>
+<body>
+  <header>
+    <img src="file:///C:/Users/YourUsername/Desktop/diona%20assignments/logo.png" alt="Company Logo" class="logo">
+    <div class="header-text">
+      <h1>Medical & Travel Expense<br>Request</h1>
+      <div class="claim-box">Claim No. 20042047</div>
+    </div>
+  </header>
+
+  <div class="footer-address">
+    333 Broadway <br>Winnipeg, MB R3C 4W3<br />
+    Phone: (204) 954-4321 <br> Toll Free: 1-855-954-4321 <br> wcb.mb.ca
+  </div>
+
+  <div class="intro-text">
+    <p><span>Madeleine Willson</span> requested reimbursement for the following medical and/or travel expenses:</p>
+  </div>
+
+  <!-- (Static tables omitted for brevity, unchanged) -->
+
+  <hr />
+
+  <p><input type="checkbox" /> I understand that the Privacy Notice applies to the personal information collected in this document.</p>
+
+  <div id="dynamicContainer"></div>
+  <button class="no-print" onclick="addSection()">Add New Expense Section</button>
+
+  <footer>
+    <div style="position: absolute; left: 40px;"><strong>Worker App ID:</strong> 712041</div>
+    <div style="margin-left: auto;"><strong>Submitted:</strong> March 28, 2024 20:43 | Page 2 of 2</div>
+  </footer>
+</body>
+</html>
+" alt="Company Logo" class="logo">
+    <div class="header-text">
+      <h1>Medical & Travel Expense<br>Request</h1>
+      <div class="claim-box">Claim No. 20042047</div>
+    </div>
+  </header>
+
+  <div class="footer-address">
+    333 Broadway, Winnipeg, MB R3C 4W3<br />
+    Phone: (204) 954-4321 | Toll Free: 1-855-954-4321 | wcb.mb.ca
+  </div>
+
+  <div class="intro-text">
+    <p><span>Madeleine Willson</span> requested reimbursement for the following medical and/or travel expenses:</p>
+  </div>
+
+  <!-- (Static tables omitted for brevity, unchanged) -->
+
+  <hr />
+
+  <p><input type="checkbox" /> I understand that the Privacy Notice applies to the personal information collected in this document.</p>
+
+  <div id="dynamicContainer"></div>
+  <button class="no-print" onclick="addSection()">Add New Expense Section</button>
+
+  <footer>
+    <div style="position: absolute; left: 40px;"><strong>Worker App ID:</strong> 712041</div>
+    <div style="margin-left: auto;"><strong>Submitted:</strong> March 28, 2024 20:43</div>
+  </footer>
+</body>
+</html>
