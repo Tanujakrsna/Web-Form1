@@ -1,9 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medical & Travel Expense Request</title>
+<html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medical &amp; Travel Expense Request</title>
   <style>
     @media print {
       .no-print { display: none; }
@@ -19,8 +17,8 @@
 
     header {
       display: flex;
-      align-items: center;
       justify-content: space-between;
+      align-items: center;
       margin-bottom: 10px;
     }
 
@@ -29,8 +27,7 @@
     }
 
     .header-text {
-      flex: 1;
-      text-align: center;
+      text-align: right;
     }
 
     .header-text h1 {
@@ -46,7 +43,7 @@
     }
 
     .footer-address {
-      text-align: center;
+      text-align:center;
       font-size: 0.9em;
       margin-bottom: 20px;
     }
@@ -105,242 +102,77 @@
       margin-bottom: 30px;
     }
   </style>
-  <script>
-    function addSection() {
-      const container = document.getElementById("dynamicContainer");
-      const newSection = document.createElement("div");
-      newSection.classList.add("dynamic-section");
-      newSection.innerHTML = `
-        <div class="section-title">
-          <label>Expense Name: <input type="text" placeholder="Enter expense category"></label>
-        </div>
-        <div>
-          <label>Number of Columns: <input type="number" id="colCount" min="1" max="10" value="2" onchange="generateTable(this)"></label>
-        </div>
-        <div class="dynamic-table"></div>
-      `;
-      container.appendChild(newSection);
-      generateTable(newSection.querySelector('#colCount'));
-    }
 
-    function generateTable(input) {
-      const count = parseInt(input.value);
-      const tableContainer = input.closest('.dynamic-section').querySelector('.dynamic-table');
-      let headerRow = '<tr>';
-      let valueRow = '<tr>';
-      for (let i = 0; i < count; i++) {
-        headerRow += `<th contenteditable='true'>Column ${i + 1}</th>`;
-        valueRow += `<td contenteditable='true'>Value ${i + 1}</td>`;
-      }
-      headerRow += '</tr>';
-      valueRow += '</tr>';
-      tableContainer.innerHTML = `<table>${headerRow}${valueRow}</table>`;
-    }
-  </script>
 </head>
 <body>
   <header>
-    <img src="<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Medical & Travel Expense Request</title>
-  <style>
-    @media print {
-      .no-print { display: none; }
-      body { margin: 0; }
-      .page-break { page-break-before: always; }
-      footer { position: fixed; bottom: 0; width: 100%; }
-    }
-
-    body {
-      font-family: Arial, sans-serif;
-      margin: 40px;
-    }
-
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 10px;
-    }
-
-    .logo {
-      width: 120px;
-    }
-
-    .header-text {
-      flex: 1;
-      text-align: center;
-    }
-
-    .header-text h1 {
-      margin: 0;
-      font-size: 1.4em;
-    }
-
-    .claim-box {
-      border: 1px solid #000;
-      padding: 5px 10px;
-      display: inline-block;
-      margin-top: 5px;
-    }
-
-    .footer-address {
-      text-align: center;
-      font-size: 0.9em;
-      margin-bottom: 20px;
-    }
-
-    .intro-text {
-      margin: 20px 0;
-    }
-
-    .intro-text span {
-      color: #0066cc;
-      font-weight: bold;
-    }
-
-    table {
-      width: 100%;
-      border-collapse: collapse;
-      margin-bottom: 20px;
-      font-size: 0.9em;
-    }
-
-    th, td {
-      border: 1px solid #333;
-      padding: 8px;
-      text-align: left;
-    }
-
-    th {
-      background-color: #eee;
-      color: black;
-    }
-
-    td {
-      color: #0066cc;
-    }
-
-    .section-title {
-      font-weight: bold;
-      margin: 20px 0 10px;
-      font-size: 1.1em;
-    }
-
-    hr {
-      border: none;
-      border-top: 1px solid #aaa;
-      margin: 40px 0;
-    }
-
-    footer {
-      font-size: 0.8em;
-      display: flex;
-      justify-content: space-between;
-      padding: 0 40px;
-    }
-
-    .dynamic-section {
-      margin-bottom: 30px;
-    }
-  </style>
-  <script>
-    function addSection() {
-      const container = document.getElementById("dynamicContainer");
-      const newSection = document.createElement("div");
-      newSection.classList.add("dynamic-section");
-      newSection.innerHTML = `
-        <div class="section-title">
-          <label>Expense Name: <input type="text" placeholder="Enter expense category"></label>
-        </div>
-        <div>
-          <label>Number of Columns: <input type="number" id="colCount" min="1" max="10" value="2" onchange="generateTable(this)"></label>
-        </div>
-        <div class="dynamic-table"></div>
-      `;
-      container.appendChild(newSection);
-      generateTable(newSection.querySelector('#colCount'));
-    }
-
-    function generateTable(input) {
-      const count = parseInt(input.value);
-      const tableContainer = input.closest('.dynamic-section').querySelector('.dynamic-table');
-      let headerRow = '<tr>';
-      let valueRow = '<tr>';
-      for (let i = 0; i < count; i++) {
-        headerRow += `<th contenteditable='true'>Column ${i + 1}</th>`;
-        valueRow += `<td contenteditable='true'>Value ${i + 1}</td>`;
-      }
-      headerRow += '</tr>';
-      valueRow += '</tr>';
-      tableContainer.innerHTML = `<table>${headerRow}${valueRow}</table>`;
-    }
-  </script>
-</head>
-<body>
-  <header>
-    <img src="file:///C:/Users/YourUsername/Desktop/diona%20assignments/logo.png" alt="Company Logo" class="logo">
+    <img src="C:\Users\DELL\Desktop\Diona Assignments\diona.png" alt="Company Logo" class="logo">
+  <div class="footer-address">
+    333 Broadway<br> Winnipeg, MB R3C 4W3<br>
+    Phone:(204) 954-4321 <br>Toll Free: 1-855-954-4321<br>wcb.mb.ca
+  </div>
     <div class="header-text">
-      <h1>Medical & Travel Expense<br>Request</h1>
+      <h1>Medical &amp; Travel Expense<br>Request</h1>
       <div class="claim-box">Claim No. 20042047</div>
     </div>
   </header>
 
-  <div class="footer-address">
-    333 Broadway <br>Winnipeg, MB R3C 4W3<br />
-    Phone: (204) 954-4321 <br> Toll Free: 1-855-954-4321 <br> wcb.mb.ca
-  </div>
+ 
 
   <div class="intro-text">
     <p><span>Madeleine Willson</span> requested reimbursement for the following medical and/or travel expenses:</p>
   </div>
 
-  <!-- (Static tables omitted for brevity, unchanged) -->
+  <div class="section-title">Prescription Drugs</div>
+  <table>
+    <tbody><tr><th>Drug Name</th><th>Date Purchased</th><th>Healthcare Provider Name</th><th>Paid Amount</th></tr>
+    <tr><td>Naproxen</td><td>February 28, 2024<br>February 29, 2024</td><td>Dr. Best</td><td>$20.00</td></tr>
+  </tbody></table>
 
-  <hr />
+  <div class="section-title">Over-the-Counter Drugs</div>
+  <table>
+    <tbody><tr><th>Drug Name</th><th>Date Purchased</th><th>Paid Amount</th><th>Seller's Name</th><th>Reason for Purchasing</th></tr>
+    <tr><td>Advil</td><td>March 28, 2024</td><td>$8.00</td><td>Shoppers Drug Mart</td><td>Pain</td></tr>
+  </tbody></table>
 
-  <p><input type="checkbox" /> I understand that the Privacy Notice applies to the personal information collected in this document.</p>
+  <div class="section-title">Bandages, Braces or Other Medical Supplies</div>
+  <table>
+    <tbody><tr><th>Item Purchased</th><th>Date Purchased</th><th>Was this Prescribed?</th><th>Paid Amount</th><th>Seller's Name</th></tr>
+    <tr><td>Tensor</td><td>February 28, 2024</td><td>Yes - Dr. Best</td><td>$10.00</td><td>Shoppers Drug Mart</td></tr>
+  </tbody></table>
 
-  <div id="dynamicContainer"></div>
-  <button class="no-print" onclick="addSection()">Add New Expense Section</button>
+  <div class="section-title">Parking for Medical Appointments</div>
+  <table>
+    <tbody><tr><th>Address of Healthcare Provider/Medical Facility</th><th>Date</th><th>Paid Amount</th><th>Meter Number</th></tr>
+    <tr><td>333 St Mary Ave, Winnipeg MB R3C 4A5, Canada</td><td>March 28, 2024</td><td>$10.00</td><td>12245</td></tr>
+  </tbody></table>
 
-  <footer>
-    <div style="position: absolute; left: 40px;"><strong>Worker App ID:</strong> 712041</div>
-    <div style="margin-left: auto;"><strong>Submitted:</strong> March 28, 2024 20:43 | Page 2 of 2</div>
-  </footer>
-</body>
-</html>
-" alt="Company Logo" class="logo">
-    <div class="header-text">
-      <h1>Medical & Travel Expense<br>Request</h1>
-      <div class="claim-box">Claim No. 20042047</div>
-    </div>
-  </header>
+  <div class="section-title">Mileage to Medical Appointments</div>
+  <table>
+    <tbody><tr><th>Appointment Date</th><th>Address of Healthcare Provider/Medical Facility</th><th>Address of Workplace</th><th>Number of km (Round Trip)</th></tr>
+    <tr><td>March 28, 2024</td><td>HSC, 820 Sherbrook St, Winnipeg MB R3A 1R9, Canada</td><td>WCB, 333 Broadway, Winnipeg MB R3C 4W3, Canada</td><td>20 km</td></tr>
+  </tbody></table>
 
-  <div class="footer-address">
-    333 Broadway, Winnipeg, MB R3C 4W3<br />
-    Phone: (204) 954-4321 | Toll Free: 1-855-954-4321 | wcb.mb.ca
-  </div>
+  <div class="page-break"></div>
 
-  <div class="intro-text">
-    <p><span>Madeleine Willson</span> requested reimbursement for the following medical and/or travel expenses:</p>
-  </div>
+  <div class="section-title">Bus or Taxi Fare for Medical Appointments*</div>
+  <p><em>*Note: Pre-approval is required from your WCB representative to claim taxi fare(s).</em></p>
+  <table>
+    <tbody><tr><th>Appointment Date</th><th>Address of Starting Point</th><th>Address of Healthcare Provider/Medical Facility</th><th>Bus or Taxi</th><th>Total Fare Paid</th></tr>
+    <tr><td>March 28, 2024</td><td>HSC Winnipeg Women’s Hospital, 665 William Ave, Winnipeg MB R3E 0Z2, Canada</td><td>HSC Winnipeg Women’s Hospital, 665 William Ave, Winnipeg MB R3E 0Z2, Canada</td><td>Bus</td><td>$3.00</td></tr>
+    <tr><td>March 27, 2024</td><td>25 Furby St, Winnipeg MB R3C 2A2, Canada</td><td>440 Edmonton St, Winnipeg MB R3B 2M4, Canada</td><td>Taxi</td><td>$15.00</td></tr>
+  </tbody></table>
 
-  <!-- (Static tables omitted for brevity, unchanged) -->
+  <hr>
 
-  <hr />
+  <p><input type="checkbox"> I understand that the <a href="">Privacy Notice </a>
+applies to the personal information collected in this document.</p>
 
-  <p><input type="checkbox" /> I understand that the Privacy Notice applies to the personal information collected in this document.</p>
-
-  <div id="dynamicContainer"></div>
-  <button class="no-print" onclick="addSection()">Add New Expense Section</button>
-
+  
   <footer>
     <div style="position: absolute; left: 40px;"><strong>Worker App ID:</strong> 712041</div>
     <div style="margin-left: auto;"><strong>Submitted:</strong> March 28, 2024 20:43</div>
   </footer>
-</body>
-</html>
+
+
+</body></html>
